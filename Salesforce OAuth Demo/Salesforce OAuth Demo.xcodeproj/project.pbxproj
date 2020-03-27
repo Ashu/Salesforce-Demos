@@ -10,11 +10,12 @@
 		2C8B79E907A0C9B9C2648F7D /* Pods_Salesforce_OAuth_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E051476B36C43F7D5260C /* Pods_Salesforce_OAuth_Demo.framework */; };
 		903D456B242DC385007BD872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456A242DC385007BD872 /* AppDelegate.swift */; };
 		903D456D242DC385007BD872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456C242DC385007BD872 /* SceneDelegate.swift */; };
-		903D456F242DC385007BD872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456E242DC385007BD872 /* ViewController.swift */; };
 		903D4572242DC385007BD872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903D4570242DC385007BD872 /* Main.storyboard */; };
 		903D4574242DC387007BD872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903D4573242DC387007BD872 /* Assets.xcassets */; };
 		903D4577242DC387007BD872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903D4575242DC387007BD872 /* LaunchScreen.storyboard */; };
 		903D4582242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D4581242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift */; };
+		903D458D242E215C007BD872 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D458C242E215C007BD872 /* RootViewController.swift */; };
+		903D458F242E2F42007BD872 /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 903D458E242E2F42007BD872 /* bootconfig.plist */; };
 		929C34053B45E951395E9656 /* Pods_Salesforce_OAuth_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3016BBFB6B3903DDD5FF90D /* Pods_Salesforce_OAuth_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		903D4567242DC385007BD872 /* Salesforce OAuth Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Salesforce OAuth Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		903D456A242DC385007BD872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903D456C242DC385007BD872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		903D456E242DC385007BD872 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		903D4571242DC385007BD872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		903D4573242DC387007BD872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		903D4576242DC387007BD872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		903D457D242DC387007BD872 /* Salesforce OAuth DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Salesforce OAuth DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		903D4581242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesforce_OAuth_DemoTests.swift; sourceTree = "<group>"; };
 		903D4583242DC387007BD872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		903D458C242E215C007BD872 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		903D458E242E2F42007BD872 /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
 		A20771703A001EFDC484BFE5 /* Pods-Salesforce OAuth Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salesforce OAuth Demo.debug.xcconfig"; path = "Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E3016BBFB6B3903DDD5FF90D /* Pods_Salesforce_OAuth_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Salesforce_OAuth_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,11 +115,12 @@
 			children = (
 				903D456A242DC385007BD872 /* AppDelegate.swift */,
 				903D456C242DC385007BD872 /* SceneDelegate.swift */,
-				903D456E242DC385007BD872 /* ViewController.swift */,
 				903D4570242DC385007BD872 /* Main.storyboard */,
 				903D4573242DC387007BD872 /* Assets.xcassets */,
 				903D4575242DC387007BD872 /* LaunchScreen.storyboard */,
 				903D4578242DC387007BD872 /* Info.plist */,
+				903D458E242E2F42007BD872 /* bootconfig.plist */,
+				903D458C242E215C007BD872 /* RootViewController.swift */,
 			);
 			path = "Salesforce OAuth Demo";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903D458F242E2F42007BD872 /* bootconfig.plist in Resources */,
 				903D4577242DC387007BD872 /* LaunchScreen.storyboard in Resources */,
 				903D4574242DC387007BD872 /* Assets.xcassets in Resources */,
 				903D4572242DC385007BD872 /* Main.storyboard in Resources */,
@@ -299,9 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903D456F242DC385007BD872 /* ViewController.swift in Sources */,
 				903D456B242DC385007BD872 /* AppDelegate.swift in Sources */,
 				903D456D242DC385007BD872 /* SceneDelegate.swift in Sources */,
+				903D458D242E215C007BD872 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ashutosh.Salesforce-OAuth-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ashutosh.Salesforce-OAuth-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

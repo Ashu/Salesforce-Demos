@@ -11,11 +11,26 @@ import MobileSync
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
 
 
-
+    override init() {
+        super.init()
+        MobileSyncSDKManager.initializeSDK()
+        
+        AuthHelper.registerBlock(forCurrentUserChangeNotifications: {
+            
+        })
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        AuthHelper.loginIfRequired {
+            self.setupRootViewController()
+        }
         return true
     }
 
@@ -35,6 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func setupRootViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootVC = storyboard.instantiateViewController(withIdentifier: "RootViewController")
+        let navVC = UINavigationController(rootViewController: rootVC)
+        self.window?.rootViewController = navVC
+    }
 
 }
 
