@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C8B79E907A0C9B9C2648F7D /* Pods_Salesforce_OAuth_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E051476B36C43F7D5260C /* Pods_Salesforce_OAuth_Demo.framework */; };
 		903D456B242DC385007BD872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456A242DC385007BD872 /* AppDelegate.swift */; };
 		903D456D242DC385007BD872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456C242DC385007BD872 /* SceneDelegate.swift */; };
 		903D456F242DC385007BD872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D456E242DC385007BD872 /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		903D4574242DC387007BD872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903D4573242DC387007BD872 /* Assets.xcassets */; };
 		903D4577242DC387007BD872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903D4575242DC387007BD872 /* LaunchScreen.storyboard */; };
 		903D4582242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D4581242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift */; };
+		929C34053B45E951395E9656 /* Pods_Salesforce_OAuth_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3016BBFB6B3903DDD5FF90D /* Pods_Salesforce_OAuth_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C40A5FEBB7E6EE222E50BB7 /* Pods-Salesforce OAuth DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salesforce OAuth DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-Salesforce OAuth DemoTests/Pods-Salesforce OAuth DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		525E051476B36C43F7D5260C /* Pods_Salesforce_OAuth_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Salesforce_OAuth_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72FB68A290943F804EE4CC1C /* Pods-Salesforce OAuth Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salesforce OAuth Demo.release.xcconfig"; path = "Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo.release.xcconfig"; sourceTree = "<group>"; };
+		77CAA65F6C41764C89E73EE9 /* Pods-Salesforce OAuth DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salesforce OAuth DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Salesforce OAuth DemoTests/Pods-Salesforce OAuth DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		903D4567242DC385007BD872 /* Salesforce OAuth Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Salesforce OAuth Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		903D456A242DC385007BD872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		903D456C242DC385007BD872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		903D457D242DC387007BD872 /* Salesforce OAuth DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Salesforce OAuth DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		903D4581242DC387007BD872 /* Salesforce_OAuth_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesforce_OAuth_DemoTests.swift; sourceTree = "<group>"; };
 		903D4583242DC387007BD872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20771703A001EFDC484BFE5 /* Pods-Salesforce OAuth Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salesforce OAuth Demo.debug.xcconfig"; path = "Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		E3016BBFB6B3903DDD5FF90D /* Pods_Salesforce_OAuth_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Salesforce_OAuth_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8B79E907A0C9B9C2648F7D /* Pods_Salesforce_OAuth_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929C34053B45E951395E9656 /* Pods_Salesforce_OAuth_DemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		687377B1020DD41C6F2D75AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20771703A001EFDC484BFE5 /* Pods-Salesforce OAuth Demo.debug.xcconfig */,
+				72FB68A290943F804EE4CC1C /* Pods-Salesforce OAuth Demo.release.xcconfig */,
+				2C40A5FEBB7E6EE222E50BB7 /* Pods-Salesforce OAuth DemoTests.debug.xcconfig */,
+				77CAA65F6C41764C89E73EE9 /* Pods-Salesforce OAuth DemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		71B5AFAD941DFA1309C44147 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				525E051476B36C43F7D5260C /* Pods_Salesforce_OAuth_Demo.framework */,
+				E3016BBFB6B3903DDD5FF90D /* Pods_Salesforce_OAuth_DemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		903D455E242DC384007BD872 = {
 			isa = PBXGroup;
 			children = (
 				903D4569242DC385007BD872 /* Salesforce OAuth Demo */,
 				903D4580242DC387007BD872 /* Salesforce OAuth DemoTests */,
 				903D4568242DC385007BD872 /* Products */,
+				687377B1020DD41C6F2D75AB /* Pods */,
+				71B5AFAD941DFA1309C44147 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 903D4586242DC387007BD872 /* Build configuration list for PBXNativeTarget "Salesforce OAuth Demo" */;
 			buildPhases = (
+				3765F1BA2DBAD71FE2274815 /* [CP] Check Pods Manifest.lock */,
 				903D4563242DC385007BD872 /* Sources */,
 				903D4564242DC385007BD872 /* Frameworks */,
 				903D4565242DC385007BD872 /* Resources */,
+				9973E93FD38615AD92DEACD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 903D4589242DC387007BD872 /* Build configuration list for PBXNativeTarget "Salesforce OAuth DemoTests" */;
 			buildPhases = (
+				66D3213813A49E56FE67BFB9 /* [CP] Check Pods Manifest.lock */,
 				903D4579242DC387007BD872 /* Sources */,
 				903D457A242DC387007BD872 /* Frameworks */,
 				903D457B242DC387007BD872 /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3765F1BA2DBAD71FE2274815 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Salesforce OAuth Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66D3213813A49E56FE67BFB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Salesforce OAuth DemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9973E93FD38615AD92DEACD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Salesforce OAuth Demo/Pods-Salesforce OAuth Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		903D4563242DC385007BD872 /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		903D4587242DC387007BD872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20771703A001EFDC484BFE5 /* Pods-Salesforce OAuth Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +479,7 @@
 		};
 		903D4588242DC387007BD872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72FB68A290943F804EE4CC1C /* Pods-Salesforce OAuth Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		903D458A242DC387007BD872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C40A5FEBB7E6EE222E50BB7 /* Pods-Salesforce OAuth DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +521,7 @@
 		};
 		903D458B242DC387007BD872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77CAA65F6C41764C89E73EE9 /* Pods-Salesforce OAuth DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

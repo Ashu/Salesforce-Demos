@@ -1,0 +1,42 @@
+PODS:
+  - SalesforceAnalytics (8.1.0):
+    - SalesforceAnalytics/SalesforceAnalytics (= 8.1.0)
+  - SalesforceAnalytics/SalesforceAnalytics (8.1.0):
+    - SalesforceSDKCommon
+  - SalesforceSDKCommon (8.1.0):
+    - SalesforceSDKCommon/SalesforceSDKCommon (= 8.1.0)
+  - SalesforceSDKCommon/SalesforceSDKCommon (8.1.0)
+  - SalesforceSDKCore (8.1.0):
+    - SalesforceSDKCore/SalesforceSDKCore (= 8.1.0)
+  - SalesforceSDKCore/SalesforceSDKCore (8.1.0):
+    - SalesforceAnalytics
+    - SalesforceSDKCore/SalesforceSDKCore/arc (= 8.1.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base (= 8.1.0)
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 8.1.0)
+  - SalesforceSDKCore/SalesforceSDKCore/arc (8.1.0):
+    - SalesforceAnalytics
+    - SalesforceSDKCore/SalesforceSDKCore/base
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc
+  - SalesforceSDKCore/SalesforceSDKCore/base (8.1.0):
+    - SalesforceAnalytics
+  - SalesforceSDKCore/SalesforceSDKCore/no-arc (8.1.0):
+    - SalesforceAnalytics
+    - SalesforceSDKCore/SalesforceSDKCore/base
+
+DEPENDENCIES:
+  - SalesforceSDKCore
+
+SPEC REPOS:
+  https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git:
+    - SalesforceAnalytics
+    - SalesforceSDKCommon
+    - SalesforceSDKCore
+
+SPEC CHECKSUMS:
+  SalesforceAnalytics: 14e79f00525e6f13067b7fc866fbc2735241d7ad
+  SalesforceSDKCommon: 53cf68379cfb35fcc9d416fd411b0bf5a79da17c
+  SalesforceSDKCore: af5bad02d32e21819fe98a19d592cd48d999f52d
+
+PODFILE CHECKSUM: 3bd7077046b52b1f54bbefc61f9a7b282ff9cc0c
+
+COCOAPODS: 1.8.0
