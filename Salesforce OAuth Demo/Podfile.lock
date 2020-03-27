@@ -1,4 +1,11 @@
 PODS:
+  - FMDB/SQLCipher (2.7.5):
+    - SQLCipher
+  - MobileSync (8.1.0):
+    - MobileSync/MobileSync (= 8.1.0)
+  - MobileSync/MobileSync (8.1.0):
+    - SalesforceSDKCore
+    - SmartStore
   - SalesforceAnalytics (8.1.0):
     - SalesforceAnalytics/SalesforceAnalytics (= 8.1.0)
   - SalesforceAnalytics/SalesforceAnalytics (8.1.0):
@@ -22,21 +29,43 @@ PODS:
   - SalesforceSDKCore/SalesforceSDKCore/no-arc (8.1.0):
     - SalesforceAnalytics
     - SalesforceSDKCore/SalesforceSDKCore/base
+  - SmartStore (8.1.0):
+    - SmartStore/SmartStore (= 8.1.0)
+  - SmartStore/SmartStore (8.1.0):
+    - FMDB/SQLCipher (~> 2.7.5)
+    - SalesforceSDKCore
+    - SQLCipher/fts (~> 4.2.0)
+  - SQLCipher (4.2.0):
+    - SQLCipher/standard (= 4.2.0)
+  - SQLCipher/common (4.2.0)
+  - SQLCipher/fts (4.2.0):
+    - SQLCipher/common
+  - SQLCipher/standard (4.2.0):
+    - SQLCipher/common
 
 DEPENDENCIES:
-  - SalesforceSDKCore
+  - MobileSync
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FMDB
+    - SQLCipher
   https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git:
+    - MobileSync
     - SalesforceAnalytics
     - SalesforceSDKCommon
     - SalesforceSDKCore
+    - SmartStore
 
 SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  MobileSync: 6077501837d991914dcdaa27d1e3f03079385193
   SalesforceAnalytics: 14e79f00525e6f13067b7fc866fbc2735241d7ad
   SalesforceSDKCommon: 53cf68379cfb35fcc9d416fd411b0bf5a79da17c
   SalesforceSDKCore: af5bad02d32e21819fe98a19d592cd48d999f52d
+  SmartStore: e550bad05f830891024a9f53568e221a6d93f959
+  SQLCipher: 0187a2180ac288ea686b670b7141da62cd013b16
 
-PODFILE CHECKSUM: 3bd7077046b52b1f54bbefc61f9a7b282ff9cc0c
+PODFILE CHECKSUM: a776fca864df24b15f13fe89d7d8f139b31cdf7c
 
 COCOAPODS: 1.8.0

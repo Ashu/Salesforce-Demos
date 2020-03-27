@@ -3,12 +3,12 @@
 
 target 'Salesforce OAuth Demo' do
 source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git'
-
+source 'https://github.com/CocoaPods/Specs.git'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Salesforce OAuth Demo
-  pod 'SalesforceSDKCore'
+  pod 'MobileSync'
 
   target 'Salesforce OAuth DemoTests' do
     inherit! :search_paths
