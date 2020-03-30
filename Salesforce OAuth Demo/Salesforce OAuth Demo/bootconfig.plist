@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>remoteAccessConsumerKey</key>
-	<string>3MVG9n_HvETGhr3BhgOa3BHGyXCKez6A3lQA_zN2aHgcH5HS9W6OaGof68X7GYb1bwVmpr0whc1OBuAE7VCLW</string>
+	<string>3MVG9n_HvETGhr3DOmKgwaSKEWkQiiKo72E_wFqGPCFm8j5WPvE.2N.3T263qEZwBbo4L3GNKehUmdgQxIos0</string>
 	<key>oauthRedirectURI</key>
-	<string>salesforcedemo://auth/success</string>
+	<string>trailheadapp://auth/success</string>
 	<key>oauthScopes</key>
 	<array>
 		<string>web</string>

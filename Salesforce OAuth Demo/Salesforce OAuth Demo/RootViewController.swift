@@ -18,7 +18,7 @@ class RootViewController: UITableViewController {
 
         self.title = "Salesforce Demo App"
         
-        let request = RestClient.shared.request(forQuery: "SELECT Name FROM Contact LIMIT 10", apiVersion: SFRestDefaultAPIVersion)
+        let request = RestClient.shared.request(forQuery: "SELECT Name FROM Contact LIMIT 10", apiVersion: nil)
         
         RestClient.shared.send(request: request) { [weak self] (result) in
             switch result {
