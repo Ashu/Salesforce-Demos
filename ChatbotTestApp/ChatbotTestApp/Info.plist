@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>Used when sending an image to an agent.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Used when sending an image to an agent.</string>
 </dict>
 </plist>
