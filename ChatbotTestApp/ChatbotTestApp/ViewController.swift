@@ -11,7 +11,7 @@ import ServiceChat
 
 class ViewController: UIViewController {
     
-    let POD = "https://d.la2-c2-hnd.salesforceliveagent.com/chat"
+    let POD = "d.la2-c2-hnd.salesforceliveagent.com"
     let ORG_ID = "00D2x000000DvlK"
     let DEPLOYMENT_ID = "5722x000000PBkD"
     let BUTTON_ID = "5732x000000PBsT"
