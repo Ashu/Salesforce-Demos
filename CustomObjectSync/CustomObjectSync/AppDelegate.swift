@@ -122,13 +122,18 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
             return
         }
         
-        self.window?.rootViewController = InitialViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
         self.window?.makeKeyAndVisible()
+        
+//        self.window?.rootViewController = InitialViewController(nibName: nil, bundle: nil)
+//        self.window?.makeKeyAndVisible()
     }
     
     func setupRootViewController() {
-        let rootVC = RootViewController(nibName: nil, bundle: nil)
-        let navVC = UINavigationController(rootViewController: rootVC)
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let initialVC = storyboard.instantiateViewController(withIdentifier: "RootViewController")
+        let navVC = UINavigationController(rootViewController: initialVC)
         self.window?.rootViewController = navVC
     }
     
