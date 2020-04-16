@@ -10,7 +10,6 @@ project.xcworkspace
 .metadata/
 .settings/
 Podfile.lock
-Pods/
 bin/
 bower_components/
 build/
