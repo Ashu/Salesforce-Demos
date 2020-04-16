@@ -74,7 +74,7 @@ class RootViewController: UniversalViewController {
         
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.definesPresentationContext = true
+        self.defiesPresentationContext = true
         
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.tableView.translatesAutoresizingMaskIntoConstraints = false

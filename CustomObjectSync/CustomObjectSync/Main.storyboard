@@ -30,13 +30,73 @@
                     <view key="view" contentMode="scaleToFill" id="xDW-3o-pFX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ghp-3Z-hzT">
+                                <rect key="frame" x="40" y="277" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1Z-CX-ljp">
+                                <rect key="frame" x="154" y="351" width="106" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Save &amp; Sync">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bye-sl-JtI">
+                                <rect key="frame" x="98.5" y="429" width="217" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Fetch custom object records">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A1Z-CX-ljp" firstAttribute="top" secondItem="Ghp-3Z-hzT" secondAttribute="bottom" constant="40" id="0ru-Tb-EvZ"/>
+                            <constraint firstItem="bye-sl-JtI" firstAttribute="centerY" secondItem="xDW-3o-pFX" secondAttribute="centerY" id="6zt-4s-0CA"/>
+                            <constraint firstItem="Ghp-3Z-hzT" firstAttribute="leading" secondItem="hV0-pE-pHL" secondAttribute="leading" constant="40" id="B5R-2v-WE5"/>
+                            <constraint firstItem="bye-sl-JtI" firstAttribute="centerX" secondItem="xDW-3o-pFX" secondAttribute="centerX" id="MVZ-Dj-nBw"/>
+                            <constraint firstItem="bye-sl-JtI" firstAttribute="top" secondItem="A1Z-CX-ljp" secondAttribute="bottom" constant="40" id="T9e-DI-kDS"/>
+                            <constraint firstItem="hV0-pE-pHL" firstAttribute="trailing" secondItem="Ghp-3Z-hzT" secondAttribute="trailing" constant="40" id="TNE-2c-e0s"/>
+                            <constraint firstItem="A1Z-CX-ljp" firstAttribute="centerX" secondItem="xDW-3o-pFX" secondAttribute="centerX" id="TpU-kh-st1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hV0-pE-pHL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRL-jn-ALT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-48"/>
+            <point key="canvasLocation" x="820" y="-48"/>
+        </scene>
+        <!--Custom Objects View Controller-->
+        <scene sceneID="pi2-jO-kkD">
+            <objects>
+                <tableViewController storyboardIdentifier="CustomObjectsViewController" id="p7m-P5-auZ" customClass="CustomObjectsViewController" customModule="CustomObjectSync" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vdt-ik-VMs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YmP-6m-BQo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YmP-6m-BQo" id="PHP-lS-aNF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="p7m-P5-auZ" id="hmw-cF-gYI"/>
+                            <outlet property="delegate" destination="p7m-P5-auZ" id="CWV-D9-FEX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Or-eR-IQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="-44"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,18 @@
+{
+  "syncs": [
+    {
+      "syncName": "syncDownCustomObject",
+      "syncType": "syncDown",
+      "soupName": "mycustomobjects",
+      "target": {"type":"soql", "query":"SELECT Custom_Name__c,Name FROM MyCustomObject__c LIMIT 10000"},
+      "options": {"mergeMode":"OVERWRITE"}
+    },
+    {
+      "syncName": "syncUpCustomObject",
+      "syncType": "syncUp",
+      "soupName": "mycustomobjects",
+      "target": {"createFieldlist":["Custom_Name__c", "Name"]},
+      "options": {"fieldlist":["Id", "Custom_Name__c", "Name"], "mergeMode":"LEAVE_IF_CHANGED"}
+    }
+  ]
+}
