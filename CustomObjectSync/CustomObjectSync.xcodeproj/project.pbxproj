@@ -377,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CustomObjectSync/CustomObjectSync.entitlements;
-				DEVELOPMENT_TEAM = H9F7HUSCMC;
+				DEVELOPMENT_TEAM = K47M74PBNB;
 				INFOPLIST_FILE = CustomObjectSync/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -385,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-DSIGNPOST_ENABLED";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.demo1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashutosh.demo.custom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CustomObjectSync/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

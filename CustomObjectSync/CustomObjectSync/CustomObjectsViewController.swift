@@ -9,11 +9,20 @@
 import UIKit
 import SalesforceSDKCore
 
+protocol ContactDetailViewDelegate {
+    func userDidUpdate(object: SObjectData)
+    func userDidAdd(object: SObjectData)
+}
+
 class CustomObjectsViewController: UITableViewController {
 
     var dataRows = [[String: Any]]()
 	  
-	  // MARK: - View lifecycle
+    var detailViewDelegate: ContactDetailViewDelegate?
+    var objectManager: SObjectDataManager?
+    
+    
+    // MARK: - View lifecycle
 	  override func loadView() {
 		  super.loadView()
 		  self.title = "Mobile SDK Sample App"
