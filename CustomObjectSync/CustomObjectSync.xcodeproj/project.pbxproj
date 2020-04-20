@@ -13,9 +13,9 @@
 		4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C49D1B755242002F9F90 /* InitialViewController.swift */; };
 		540DB7EA244700620003E11B /* CustomObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540DB7E9244700620003E11B /* CustomObjectsViewController.swift */; };
 		544B00E82448421700A9E9BB /* usersyncs.json in Resources */ = {isa = PBXBuildFile; fileRef = 544B00E72448421700A9E9BB /* usersyncs.json */; };
-		544B00EA2448658A00A9E9BB /* MyCustomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B00E92448658900A9E9BB /* MyCustomObject.swift */; };
 		544B00EC244865C300A9E9BB /* SObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B00EB244865C300A9E9BB /* SObjects.swift */; };
 		78A235BD93AB7D080D67CD51 /* Pods_CustomObjectSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A29C75280BDF73123F14B4 /* Pods_CustomObjectSync.framework */; };
+		90DBF024244D7E9F0038DCC7 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBF023244D7E9F0038DCC7 /* Orders.swift */; };
 		90E6685324459EC600C2F13D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E6685224459EC500C2F13D /* Main.storyboard */; };
 		B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */; };
 		B77BD8A321125B510036B284 /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B77BD8A221125B510036B284 /* bootconfig.plist */; };
@@ -35,10 +35,10 @@
 		540DB7E9244700620003E11B /* CustomObjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomObjectsViewController.swift; sourceTree = "<group>"; };
 		544B00E624483F5C00A9E9BB /* userstore.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userstore.json; sourceTree = "<group>"; };
 		544B00E72448421700A9E9BB /* usersyncs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = usersyncs.json; sourceTree = "<group>"; };
-		544B00E92448658900A9E9BB /* MyCustomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomObject.swift; sourceTree = "<group>"; };
 		544B00EB244865C300A9E9BB /* SObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SObjects.swift; sourceTree = "<group>"; };
 		762732C14CFE40A989C3AD70 /* Pods-CustomObjectSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomObjectSync.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomObjectSync/Pods-CustomObjectSync.debug.xcconfig"; sourceTree = "<group>"; };
 		82A29C75280BDF73123F14B4 /* Pods_CustomObjectSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomObjectSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90DBF023244D7E9F0038DCC7 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		90E6685224459EC500C2F13D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		B77BD8A221125B510036B284 /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				540DB7E9244700620003E11B /* CustomObjectsViewController.swift */,
 				4FD6C49D1B755242002F9F90 /* InitialViewController.swift */,
 				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
-				544B00E92448658900A9E9BB /* MyCustomObject.swift */,
 				544B00EB244865C300A9E9BB /* SObjects.swift */,
+				90DBF023244D7E9F0038DCC7 /* Orders.swift */,
 				4F393A281C3C8BCD00B3EA13 /* main.swift */,
 			);
 			name = Classes;
@@ -251,12 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */,
+				90DBF024244D7E9F0038DCC7 /* Orders.swift in Sources */,
 				4FD6C49F1B755242002F9F90 /* RootViewController.swift in Sources */,
 				4F393A291C3C8BCD00B3EA13 /* main.swift in Sources */,
 				540DB7EA244700620003E11B /* CustomObjectsViewController.swift in Sources */,
 				4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */,
 				544B00EC244865C300A9E9BB /* SObjects.swift in Sources */,
-				544B00EA2448658A00A9E9BB /* MyCustomObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

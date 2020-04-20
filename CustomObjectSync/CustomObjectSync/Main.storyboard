@@ -31,13 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ghp-3Z-hzT">
-                                <rect key="frame" x="40" y="277" width="334" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1Z-CX-ljp">
-                                <rect key="frame" x="154" y="351" width="106" height="38"/>
+                                <rect key="frame" x="154" y="234" width="106" height="38"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="Save &amp; Sync">
@@ -48,28 +43,50 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bye-sl-JtI">
-                                <rect key="frame" x="98.5" y="429" width="217" height="38"/>
+                                <rect key="frame" x="98.5" y="312" width="217" height="38"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="Fetch custom object records">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="th7-3k-7c9">
+                                <rect key="frame" x="30" y="84" width="354" height="134"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ghp-3Z-hzT">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suD-hg-g9j">
+                                        <rect key="frame" x="0.0" y="50" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPN-4F-7tt">
+                                        <rect key="frame" x="0.0" y="100" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="A1Z-CX-ljp" firstAttribute="top" secondItem="Ghp-3Z-hzT" secondAttribute="bottom" constant="40" id="0ru-Tb-EvZ"/>
-                            <constraint firstItem="bye-sl-JtI" firstAttribute="centerY" secondItem="xDW-3o-pFX" secondAttribute="centerY" id="6zt-4s-0CA"/>
-                            <constraint firstItem="Ghp-3Z-hzT" firstAttribute="leading" secondItem="hV0-pE-pHL" secondAttribute="leading" constant="40" id="B5R-2v-WE5"/>
+                            <constraint firstItem="A1Z-CX-ljp" firstAttribute="top" secondItem="th7-3k-7c9" secondAttribute="bottom" constant="16" id="B1U-4Z-bIm"/>
                             <constraint firstItem="bye-sl-JtI" firstAttribute="centerX" secondItem="xDW-3o-pFX" secondAttribute="centerX" id="MVZ-Dj-nBw"/>
+                            <constraint firstItem="th7-3k-7c9" firstAttribute="top" secondItem="hV0-pE-pHL" secondAttribute="top" constant="40" id="NFX-vZ-4FA"/>
+                            <constraint firstItem="th7-3k-7c9" firstAttribute="leading" secondItem="hV0-pE-pHL" secondAttribute="leading" constant="30" id="RcM-3O-eSL"/>
                             <constraint firstItem="bye-sl-JtI" firstAttribute="top" secondItem="A1Z-CX-ljp" secondAttribute="bottom" constant="40" id="T9e-DI-kDS"/>
-                            <constraint firstItem="hV0-pE-pHL" firstAttribute="trailing" secondItem="Ghp-3Z-hzT" secondAttribute="trailing" constant="40" id="TNE-2c-e0s"/>
                             <constraint firstItem="A1Z-CX-ljp" firstAttribute="centerX" secondItem="xDW-3o-pFX" secondAttribute="centerX" id="TpU-kh-st1"/>
+                            <constraint firstItem="hV0-pE-pHL" firstAttribute="trailing" secondItem="th7-3k-7c9" secondAttribute="trailing" constant="30" id="pHU-7T-cHK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hV0-pE-pHL"/>
                     </view>
                     <connections>
-                        <outlet property="nameTextField" destination="Ghp-3Z-hzT" id="Xrj-1y-fQl"/>
+                        <outlet property="orderDescriptionField" destination="sPN-4F-7tt" id="hmn-FS-AFQ"/>
+                        <outlet property="orderNameField" destination="Ghp-3Z-hzT" id="VID-mC-aUn"/>
+                        <outlet property="orderTypeField" destination="suD-hg-g9j" id="QdU-TP-LoX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRL-jn-ALT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

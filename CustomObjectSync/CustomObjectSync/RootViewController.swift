@@ -28,10 +28,31 @@ import MobileSync
 
 class RootViewController: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var orderNameField: UITextField!
+    @IBOutlet weak var orderTypeField: UITextField!
+    @IBOutlet weak var orderDescriptionField: UITextField!
     
-    fileprivate var sObjectsDataManager = SObjectDataManager(dataSpec: MyCustomObjSObjectData.dataSpec()!)
-    fileprivate var customObj: MyCustomObjSObjectData?
+    fileprivate var sObjectsDataManager = SObjectDataManager(dataSpec: OrderSObjectData.dataSpec()!)
+    fileprivate var orderObject: OrderSObjectData?
+    
+//    init(_ contact: OrderSObjectData?, objectManager: SObjectDataManager, completion:ContactDetailEditCompletion?) {
+//        self.completion = completion
+//        self.objectManager = objectManager
+//        super.init(nibName: nil, bundle: nil)
+//        if let c = contact {
+//            self.title = ContactHelper.nameStringFromContact(c)
+//            self.contact = contact
+//        } else {
+//            self.title = "New Contact"
+//            self.isNewContact = true
+//            self.contact = contact
+//            self.contact = ContactSObjectData()
+//        }
+//    }
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -60,13 +81,16 @@ class RootViewController: UIViewController {
     }
     
     fileprivate func saveFieldsIfRequired() {
+        self.resignFirstResponder()
+//        guard let customObject = self.orderObject else {return}
+        let customObject = OrderSObjectData()
         
-        guard let customObject = self.customObj else {return}
-        
-        customObject.name = self.nameTextField.text
+        customObject.orderName = self.orderNameField.text
+        customObject.orderType = self.orderTypeField.text
+        customObject.orderDescription = self.orderDescriptionField.text
         
         do {
-           _ = try self.sObjectsDataManager.createLocalData(customObj)
+           _ = try self.sObjectsDataManager.createLocalData(orderObject)
        } catch let error as NSError{
             MobileSyncLogger.e(RootViewController.self, message: "Add local data failed \(error)" )
        }

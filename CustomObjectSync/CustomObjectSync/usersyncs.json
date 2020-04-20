@@ -1,18 +1,19 @@
 {
   "syncs": [
     {
-      "syncName": "syncDownCustomObject",
+      "syncName": "syncDownOrders",
       "syncType": "syncDown",
-      "soupName": "mycustomobjects",
-      "target": {"type":"soql", "query":"SELECT Custom_Name__c,Name FROM MyCustomObject__c LIMIT 10000"},
+      "soupName": "orders",
+      "target": {"type":"soql", "query":"SELECT Order_Name, Order_Type, Order_Date, Order_Description FROM Order LIMIT 10000"},
       "options": {"mergeMode":"OVERWRITE"}
     },
     {
-      "syncName": "syncUpCustomObject",
+      "syncName": "syncUpOrders",
       "syncType": "syncUp",
-      "soupName": "mycustomobjects",
-      "target": {"createFieldlist":["Custom_Name__c", "Name"]},
-      "options": {"fieldlist":["Id", "Custom_Name__c", "Name"], "mergeMode":"LEAVE_IF_CHANGED"}
+      "soupName": "orders",
+      "target": {"createFieldlist":["Order_Name", "Order_Type", "Order_Date", "Order_Description"]},
+
+      "options": {"fieldlist":["Order_Number", "Order_Name", "Order_Type", "Order_Date", "Order_Description"], "mergeMode":"LEAVE_IF_CHANGED"}
     }
   ]
 }

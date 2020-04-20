@@ -181,8 +181,8 @@ class SObjectDataManager {
 
     //Constants
     private let kSearchFilterQueueName = "com.salesforce.mobileSyncExplorer.searchFilterQueue"
-    private let kSyncDownName = "syncDownCustomObject";
-    private let kSyncUpName = "syncUpCustomObject";
+    private let kSyncDownName = "syncDownOrders";
+    private let kSyncUpName = "syncUpOrders";
     private let kMaxQueryPageSize: UInt = 1000;
     
     private var searchFilterQueue: DispatchQueue?
@@ -215,7 +215,7 @@ class SObjectDataManager {
     func populateDataRows(_ queryResults: [Any]?) -> Void {
         var mutableDataRows: [SObjectData] = [SObjectData]()
         queryResults?.forEach({ (record) in
-            let sObject = MyCustomObjSObjectData(soupDict: record as? [String : Any])
+            let sObject = OrderSObjectData(soupDict: record as? [String : Any])
             mutableDataRows.append(sObject)
         })
         self.fullDataRowList =  mutableDataRows
@@ -390,7 +390,7 @@ class SObjectDataManager {
             var matchingDataRows = [SObjectData]()
             if searchTerm.count > 0 {
                 strongSelf.fullDataRowList.forEach({ (sDataObject) in
-                    let dataSpec: SObjectDataSpec? = MyCustomObjSObjectData.dataSpec()
+                    let dataSpec: SObjectDataSpec? = OrderSObjectData.dataSpec()
                     
                     if let dataSpec = dataSpec {
                         dataSpec.objectFieldSpecs.forEach({ (fieldSpec) in

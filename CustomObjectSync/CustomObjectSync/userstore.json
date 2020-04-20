@@ -1,16 +1,18 @@
 {
-	"soups": [
-		{
-			"soupName": "mycustomobjects",
-			"indexes": [
-				{ "path": "Id", "type": "string" }
-				{ "path": "Custom_Name__c", "type": "string" }
-				{ "path": "__local__", "type": "string"},
-				{ "path": "__locally_created__", "type": "string"},
-				{ "path": "__locally_updated__", "type": "string"},
-				{ "path": "__locally_deleted__", "type": "string"},
-				{ "path": "__sync_id__", "type": "integer"}
-				
-			]
-		}]
+  "soups": [
+    {
+      "soupName": "orders",
+      "indexes": [
+        { "path": "Id", "type": "string"},
+        { "path": "Order_Name__c", "type": "string"},
+        { "path": "Order_Type__c", "type": "string"},
+        { "Path":  "Order_Description__c", "type": "string"},
+        { "path": "__local__", "type": "string"},
+        { "path": "__locally_created__", "type": "string"},
+        { "path": "__locally_updated__", "type": "string"},
+        { "path": "__locally_deleted__", "type": "string"},
+        { "path": "__sync_id__", "type": "integer"}
+      ]
+    }
+  ]
 }
