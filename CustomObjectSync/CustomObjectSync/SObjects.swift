@@ -345,8 +345,9 @@ class SObjectDataManager {
                 switch (syncState.status) {
                 case .done:
                     do {
-                        let objects = try strongSelf.queryLocalData()
-                        strongSelf.populateDataRows(objects)
+//                        let objects = try strongSelf.queryLocalData()
+//                        strongSelf.populateDataRows(objects)
+                        
                         try strongSelf.refreshRemoteData({ (sobjs) in
                             onSuccess(sobjs)
                         }, onFailure:  { (error,syncState) in

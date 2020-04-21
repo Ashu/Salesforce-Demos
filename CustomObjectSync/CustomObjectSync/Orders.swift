@@ -79,7 +79,7 @@ class OrderSObjectDataSpec: SObjectDataSpec {
             SObjectDataFieldSpec(fieldName: OrderConstants.kOrderTypeField, searchable: true),
             SObjectDataFieldSpec(fieldName: OrderConstants.kOrderDescriptionField, searchable: true)
         ]
-        let soupName = "Orders"
+        let soupName = "NewOrder__c"
         let orderByFieldName: String  = OrderConstants.kOrderNameField
         self.init(objectType: objectType, objectFieldSpecs: objectFieldSpecs, soupName: soupName, orderByFieldName: orderByFieldName)
     }

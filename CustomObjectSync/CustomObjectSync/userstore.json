@@ -1,7 +1,7 @@
 {
   "soups": [
     {
-      "soupName": "orders",
+      "soupName": "NewOrder",
       "indexes": [
         { "path": "Id", "type": "string"},
         { "path": "Order_Name__c", "type": "string"},

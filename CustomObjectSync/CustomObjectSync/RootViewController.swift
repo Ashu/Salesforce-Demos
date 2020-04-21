@@ -56,12 +56,13 @@ class RootViewController: UIViewController {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
-        let syncBarButton = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(syncUpDown))
+       
+        let syncBarButton = UIBarButtonItem(title: "SYNC", style: .done, target: self, action: #selector(syncUpDown))
         self.navigationItem.rightBarButtonItem = syncBarButton
 	}
     
     @IBAction func saveTapped(_ sender: UIButton) {
+        createOrdersSoup(name: "NewOrder__C")
         saveFieldsIfRequired()
     }
     
@@ -94,6 +95,38 @@ class RootViewController: UIViewController {
        } catch let error as NSError{
             MobileSyncLogger.e(RootViewController.self, message: "Add local data failed \(error)" )
        }
+    }
+    
+    func checkForOrderSoup() {
+        
+    }
+    
+    func createOrdersSoup(name: String) {
+        guard let user = UserAccountManager.shared.currentUserAccount,
+            let store = SmartStore.shared(withName: SmartStore.defaultStoreName,
+                forUserAccount: user),
+            let  index1 = SoupIndex(path: "Order_Name__c", indexType: "String",
+                columnName: "Order_Name__c"),
+            let  index2 = SoupIndex(path: "Id", indexType: "String",
+                columnName: "Id"),
+            let index3 = SoupIndex(path: "Order_Type__c", indexType: "String", columnName: "Order_Type__c"),
+            let index4 = SoupIndex(path: "Order_Description__c", indexType: "String", columnName: "Order_Description__c")
+
+        else {
+            return
+        }
+        
+        if store.soupExists(forName: "NewOrder__c") {
+            print("Soup Exists")
+        } else {
+            do {
+                try store.registerSoup(withName: name, withIndices:[index1,index2,index3,index4])
+            } catch (let error) {
+                SalesforceLogger.d(RootViewController.self, message:"Couldn’t create soup \(name). Error: \(error.localizedDescription)")
+                return
+            }
+        }
+        
     }
     
     fileprivate func showAlert(_ title:String, message:String) -> UIAlertController {
