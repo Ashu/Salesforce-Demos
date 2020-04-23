@@ -35,14 +35,14 @@ class RootViewController: UIViewController {
     fileprivate var sObjectsDataManager = SObjectDataManager(dataSpec: OrderSObjectData.dataSpec()!)
     fileprivate var orderObject: OrderSObjectData?
     
-	override func viewDidLoad() {
-		super.viewDidLoad()
-       
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let syncBarButton = UIBarButtonItem(title: "SYNC", style: .done, target: self, action: #selector(syncUpDown))
         self.navigationItem.rightBarButtonItem = syncBarButton
         
         createOrdersSoup(name: "NewOrder__c")
-	}
+    }
     
     @IBAction func saveTapped(_ sender: UIButton) {
         createOrdersSoup(name: "NewOrder__c")
@@ -59,17 +59,16 @@ class RootViewController: UIViewController {
             DispatchQueue.main.async {
                 alert.message = "Sync Complete!"
                 alert.dismiss(animated: true, completion: nil)
-//                self?.refreshList()
+                //                self?.refreshList()
             }
-        }, onFailure: { [weak self] (error, syncState) in
-            alert.message = "Sync Failed!"
-            alert.dismiss(animated: true, completion: nil)
-//            self?.refreshList()
+            }, onFailure: { [weak self] (error, syncState) in
+                alert.message = "Sync Failed!"
+                alert.dismiss(animated: true, completion: nil)
+                //            self?.refreshList()
         })
     }
     
     fileprivate func saveFieldsIfRequired() {
-        self.resignFirstResponder()
         
         let customObject = OrderSObjectData()
         
@@ -78,25 +77,33 @@ class RootViewController: UIViewController {
         customObject.orderDescription = self.orderDescriptionField.text
         
         do {
-           _ = try self.sObjectsDataManager.createLocalData(customObject)
-       } catch let error as NSError{
+            _ = try self.sObjectsDataManager.createLocalData(customObject)
+            
+            self.orderTypeField.text = ""
+            self.orderDescriptionField.text = ""
+            self.orderNameField.text = ""
+            self.view.endEditing(true)
+            
+        } catch let error as NSError{
             MobileSyncLogger.e(RootViewController.self, message: "Add local data failed \(error)" )
-       }
+        }
+        
+        
     }
     
     func createOrdersSoup(name: String) {
         guard let user = UserAccountManager.shared.currentUserAccount,
             let store = SmartStore.shared(withName: SmartStore.defaultStoreName,
-                forUserAccount: user),
+                                          forUserAccount: user),
             let  index1 = SoupIndex(path: "Id", indexType: "String",
-                columnName: "Id"),
+                                    columnName: "Id"),
             let  index2 = SoupIndex(path: "Order_Name__c", indexType: "String",
-                columnName: "Order_Name__c"),
+                                    columnName: "Order_Name__c"),
             let index3 = SoupIndex(path: "Order_Type__c", indexType: "String", columnName: "Order_Type__c"),
             let index4 = SoupIndex(path: "Order_Description__c", indexType: "String", columnName: "Order_Description__c")
-
-        else {
-            return
+            
+            else {
+                return
         }
         
         if store.soupExists(forName: "NewOrder__c") {
@@ -118,5 +125,11 @@ class RootViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
         return alert
+    }
+}
+
+extension RootViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }
