@@ -35,35 +35,22 @@ class RootViewController: UIViewController {
     fileprivate var sObjectsDataManager = SObjectDataManager(dataSpec: OrderSObjectData.dataSpec()!)
     fileprivate var orderObject: OrderSObjectData?
     
-//    init(_ contact: OrderSObjectData?, objectManager: SObjectDataManager, completion:ContactDetailEditCompletion?) {
-//        self.completion = completion
-//        self.objectManager = objectManager
-//        super.init(nibName: nil, bundle: nil)
-//        if let c = contact {
-//            self.title = ContactHelper.nameStringFromContact(c)
-//            self.contact = contact
-//        } else {
-//            self.title = "New Contact"
-//            self.isNewContact = true
-//            self.contact = contact
-//            self.contact = ContactSObjectData()
-//        }
-//    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
 	override func viewDidLoad() {
 		super.viewDidLoad()
        
         let syncBarButton = UIBarButtonItem(title: "SYNC", style: .done, target: self, action: #selector(syncUpDown))
         self.navigationItem.rightBarButtonItem = syncBarButton
+        
+        createOrdersSoup(name: "NewOrder__c")
 	}
     
     @IBAction func saveTapped(_ sender: UIButton) {
-        createOrdersSoup(name: "NewOrder__C")
+        createOrdersSoup(name: "NewOrder__c")
         saveFieldsIfRequired()
+    }
+    
+    @IBAction func fetchAllRecordsTapped(_ sender: UIButton) {
+        
     }
     
     @objc func syncUpDown(){
@@ -83,7 +70,7 @@ class RootViewController: UIViewController {
     
     fileprivate func saveFieldsIfRequired() {
         self.resignFirstResponder()
-//        guard let customObject = self.orderObject else {return}
+        
         let customObject = OrderSObjectData()
         
         customObject.orderName = self.orderNameField.text
@@ -91,24 +78,20 @@ class RootViewController: UIViewController {
         customObject.orderDescription = self.orderDescriptionField.text
         
         do {
-           _ = try self.sObjectsDataManager.createLocalData(orderObject)
+           _ = try self.sObjectsDataManager.createLocalData(customObject)
        } catch let error as NSError{
             MobileSyncLogger.e(RootViewController.self, message: "Add local data failed \(error)" )
        }
-    }
-    
-    func checkForOrderSoup() {
-        
     }
     
     func createOrdersSoup(name: String) {
         guard let user = UserAccountManager.shared.currentUserAccount,
             let store = SmartStore.shared(withName: SmartStore.defaultStoreName,
                 forUserAccount: user),
-            let  index1 = SoupIndex(path: "Order_Name__c", indexType: "String",
-                columnName: "Order_Name__c"),
-            let  index2 = SoupIndex(path: "Id", indexType: "String",
+            let  index1 = SoupIndex(path: "Id", indexType: "String",
                 columnName: "Id"),
+            let  index2 = SoupIndex(path: "Order_Name__c", indexType: "String",
+                columnName: "Order_Name__c"),
             let index3 = SoupIndex(path: "Order_Type__c", indexType: "String", columnName: "Order_Type__c"),
             let index4 = SoupIndex(path: "Order_Description__c", indexType: "String", columnName: "Order_Description__c")
 
@@ -121,6 +104,7 @@ class RootViewController: UIViewController {
         } else {
             do {
                 try store.registerSoup(withName: name, withIndices:[index1,index2,index3,index4])
+                store.allSoupNames()
             } catch (let error) {
                 SalesforceLogger.d(RootViewController.self, message:"Couldn’t create soup \(name). Error: \(error.localizedDescription)")
                 return
